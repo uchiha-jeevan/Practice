@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="numbercheck" method="post">
+        {% csrf_token %}
+        <p>Enter a number to check prime or not</p>
+        <input type="number" name="n">
+        <input type="submit">
+        <p>{{result}}</p>
+    </form>
+
+
+    <div class="main">
+        <form action="inbetween" method="post">
+            {% csrf_token %}
+            <h4>Check Prime Numbers inbetween two Numbers</h4>
+            <input type="text" name="number1">
+            <input type="text" name="number2">
+            <input type="submit">
+           {{lresult}} 
+           <br><br>
+           <p>Total number of prime numbers inbeween are {{size}}</p>
+        </form>
+    </div>
+    <div class="main"></div>
+</body>
+</html>
